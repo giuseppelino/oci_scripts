@@ -1,4 +1,4 @@
-#test
+#Pushing to GitHub
 resource "oci_core_vcn" "simple-vcn" {
  cidr_block = "10.0.0.0/16"
  dns_label = "vcn1"
