@@ -1,6 +1,6 @@
 resource "oci_core_instance" "ubuntu_instance" {
     # Required
-    availability_domain = ${var.localAD}
+    availability_domain = "UWQV:US-ASHBURN-AD-1"
     compartment_id = "ocid1.compartment.oc1..aaaaaaaauh6e6z6lq7ynpuqiwmip42znv3unf2cqekkcpabslvy4bttvvxsq"
     shape = "VM.Standard.E2.1"
     source_details {
