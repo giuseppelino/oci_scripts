@@ -1,6 +1,6 @@
 resource "oci_core_instance" "ubuntu_instance" {
     # Required
-    #availability_domain = "ocid1.compartment.oc1..aaaaaaaauh6e6z6lq7ynpuqiwmip42znv3unf2cqekkcpabslvy4bttvvxsq"
+    availability_domain = ${var.localAD}
     compartment_id = "ocid1.compartment.oc1..aaaaaaaauh6e6z6lq7ynpuqiwmip42znv3unf2cqekkcpabslvy4bttvvxsq"
     shape = "VM.Standard.E2.1"
     source_details {
@@ -16,7 +16,7 @@ resource "oci_core_instance" "ubuntu_instance" {
     }
     metadata = {
         ssh_authorized_keys = "/ssh_keys/ssh-key-2021-03-04.key.pub"
-        #ssh_authorized_keys = "${var.ssh_public_key}"
+        #ssh_authorized_keys = file("../../.ssh/id_rsa.pub")
     }
     preserve_boot_volume = false
 }
