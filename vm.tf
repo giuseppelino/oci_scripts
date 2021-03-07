@@ -15,8 +15,8 @@ resource "oci_core_instance" "ubuntu_instance" {
         subnet_id = "ocid1.subnet.oc1.iad.aaaaaaaa6rghzgkecwfhiy2sfbvci37dmkyyt7e2hipxtpjbvpnuy2kakzwq"
     }
     metadata = {
-        #ssh_authorized_keys = file("C:\ssh_keys\ssh-key-2021-03-04.key.pub")
-        ssh_authorized_keys = "${var.ssh_public_key}"
+        ssh_authorized_keys = "C:\ssh_keys\ssh-key-2021-03-04.key.pub"
+        #ssh_authorized_keys = "${var.ssh_public_key}"
     }
     preserve_boot_volume = false
 }
